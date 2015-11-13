@@ -8,7 +8,7 @@ make the parameterization more convenient and do the conversion from JSON to a c
 
 ### Features
 
-- Authentication by constructing the necessary request URL using the Mixpanel project's API key and API secret.
+- Authentication by constructing the necessary request URL using the Mixpanel project's API token, secret and key.
 - Access to any of Mixpanel's Export API's by a general method (`mixpanelGetData`).
 - Easy parameterization and result parsing for the following API requests:
   - `segmentation/`: get the segmentation matrix using `mixpanelGetSegmentation`. 
