@@ -2,8 +2,8 @@ mixpanelGetEventsForUsers <- function(
   account,
   ## TODO: flatten the parameter structure.
   args=list(
-    distinct_ids,    # Array of IDs.
-    ## limit=1000,
+    distinct_ids=c("id1...", "id2..."),    # Array of IDs.
+    limit=10,
     from_date="2015-01-01", ## Attention w/ month numbers starting w/ 0!!!
     to_date="2015-06-01"
     )

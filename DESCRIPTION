@@ -4,6 +4,6 @@ Date: 2015-11-12
 Title: R API for Mixpanel
 Author: Meinhard Ploner
 Maintainer: Meinhard Ploner <meinhard.ploner@prosiebensat1digital.de>
-Imports: digest, jsonlite, RCurl
+Imports: digest, jsonlite
 Description: The package provides an interface to many endpoints of Mixpanel's Data Export API. The R functions allow for event and profile data export as well as for segmentation, retention and addiction analysis. Results are always parsed into convenient R objects. 
-License: GPL (>= 2)
+License: file LICENSE
