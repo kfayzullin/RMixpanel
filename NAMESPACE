@@ -1,0 +1,7 @@
+S3method(merge, matrix)
+
+export(
+merge.matrix,mixpanelCreateAccount,mixpanelGetAddiction,
+mixpanelGetData,mixpanelGetEvents,
+mixpanelGetEventsFromFiles,mixpanelGetEventsForUsers,mixpanelGetPeople,
+mixpanelGetPeopleCount,mixpanelGetRetention,mixpanelGetSegmentation)
