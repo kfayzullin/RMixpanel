@@ -4,4 +4,5 @@ export(
 merge.matrix,mixpanelCreateAccount,mixpanelGetAddiction,
 mixpanelGetData,mixpanelGetEvents,
 mixpanelGetEventsFromFiles,mixpanelGetEventsForUsers,mixpanelGetPeople,
-mixpanelGetPeopleCount,mixpanelGetRetention,mixpanelGetSegmentation)
+mixpanelGetPeopleCount,mixpanelGetRetention,mixpanelGetSegmentation,
+createDateSequence)
