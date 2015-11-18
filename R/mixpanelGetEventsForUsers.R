@@ -1,21 +1,29 @@
 mixpanelGetEventsForUsers <- function(
   account,
-  ## TODO: flatten the parameter structure.
-  args=list(
-    distinct_ids=c("id1...", "id2..."),    # Array of IDs.
-    limit=10,
-    from_date="2015-01-01", ## Attention w/ month numbers starting w/ 0!!!
-    to_date="2015-06-01"
-    )
+  distinctIDs=c("F05AD5E5-C4...", "437dbad6-72..."),    # Array of IDs.
+  from="2010-01-01",   # ! Month numbers start HERE with 0!
+  to="2020-01-01",     # ! Month numbers start HERE with 0!
+  ...     # Additional parameters, e.g. limit=5, ...
 ) {
-  args$distinct_ids = arrayRtoJSON(args$distinct_ids)
+## MP, 2015
+##
+  args = list(...)
+  args$distinct_ids = arrayRtoJSON(distinctIDs)
+  args$from_date = from
+  args$to_date = to
+  
   res = mixpanelGetData(account, "stream/query", args, data=TRUE)
   res = jsonlite::fromJSON(res)
   
   if ("status" %in% names(res) && res$status == "ok") {
     data = res$results$events
     if (length(data) > 0) {
-      data = cbind(event=data[, 1], data[, 2], stringsAsFactors=FALSE)
+      props = data[, 2]
+      indID = which(colnames(props) == "distinct_id")
+      data = cbind(distinctID=props[, indID], 
+                   event=data[, 1], 
+                   props[, -indID, drop=FALSE], 
+                   stringsAsFactors=FALSE)
       data
     
     } else {
