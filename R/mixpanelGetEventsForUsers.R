@@ -3,6 +3,7 @@ mixpanelGetEventsForUsers <- function(
   distinctIDs=c("F05AD5E5-C4...", "437dbad6-72..."),    # Array of IDs.
   from="2010-01-01",   # ! Month numbers start HERE with 0!
   to="2020-01-01",     # ! Month numbers start HERE with 0!
+  verbose=TRUE,
   ...     # Additional parameters, e.g. limit=5, ...
 ) {
 ## MP, 2015
@@ -12,7 +13,7 @@ mixpanelGetEventsForUsers <- function(
   args$from_date = from
   args$to_date = to
   
-  res = mixpanelGetData(account, "stream/query", args, data=TRUE)
+  res = mixpanelGetData(account, "stream/query", args, data=TRUE, verbose=verbose)
   res = jsonlite::fromJSON(res)
   
   if ("status" %in% names(res) && res$status == "ok") {
