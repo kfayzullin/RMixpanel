@@ -26,15 +26,15 @@ if the property count varies over requested events or people profiles.
 ### Installation
 
 ``` r
-install.packages("RMixpanel")
+require(devtools)
+devtools::install_github("ploner/RMixpanel")
 require(RMixpanel)
 ```
 
-or
+or (coming soon)
 
 ``` r
-require(devtools)
-devtools::install_github("ploner/RMixpanel")
+install.packages("RMixpanel")
 require(RMixpanel)
 ```
 
@@ -58,7 +58,7 @@ In order to use the various methods of this package, we need to save the account
                                   token="c12f3...",
                                   secret="167e7e...", 
                                   key="553c55...")
-> class(account7TVmobileLive)
+> class(account)
 [1] "mixpanelAccount"
 ```
 
