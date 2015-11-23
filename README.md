@@ -27,7 +27,7 @@ if the property count varies over requested events or people profiles.
 
 ``` r
 require(devtools)
-devtools::install_github("ploner/RMixpanel")
+devtools::install_github("7factory/RMixpanel")
 require(RMixpanel)
 ```
 
