@@ -14,10 +14,10 @@ make the parameterization more convenient and do the conversion from JSON to a c
   - `segmentation/`: get the segmentation matrix using `mixpanelGetSegmentation`. 
   - `retention/`: get the retention matrix using `mixpanelGetRetention`.
   - `addiction/`: get the addiction matrix using `mixpanelGetAddiction`.
-  - `engage/`: get the requested people profiles using `mixpanelGetPeople`.
+  - `engage/`: get the requested people profiles using `mixpanelGetProfiles`.
   - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForUsers`.
   - `export/`: get event data as R matrix using `mixpanelGetEvents`.
-- Get people profile count for custom queries using `mixpanelGetPeopleCount`. 
+- Get people profile count for custom queries using `mixpanelGetProfilesCount`. 
 - Pagination for the endpoint `export/`. This allows querying data for long time spans using multiple requests.  
 - Different levels of verbosity (log).
 - Pre-selection of desired properties for event and profile requests. This lessens the amount of parsed data especially 
@@ -77,7 +77,7 @@ In order to use the various methods of this package, we need to save the account
 #### Number of people profiles matching some conditions
 
 ``` r
-> mixpanelGetPeopleCount(account, where='properties["KPI1"] > 1.32')
+> mixpanelGetProfilesCount(account, where='properties["KPI1"] > 1.32')
 ## Example output:
 ## 21987   
 ```
@@ -87,7 +87,7 @@ In order to use the various methods of this package, we need to save the account
 Given the people profiles have two properties named KPI1 and KPI2, the following lines of code will load these properties for all profiles matching the query `KPI1 >= 1.32` and fill an R data.frame with the corresponding data. The `hist` method could be used to generate a histogram of one of the KPI's.
 
 ``` r
-> profiles = mixpanelGetPeople(account, where='properties["KPI1"] > 1.32', 
+> profiles = mixpanelGetProfiles(account, where='properties["KPI1"] > 1.32', 
                                select=c("KPI1", "KPI2"))
 > print(profiles)
 ## Example output:
