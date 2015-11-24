@@ -1,5 +1,4 @@
-peopleJson2RMatrix <-
-function(
+profilesJson2RMatrix <- function(
   jsonData, 
   select=TRUE  # If a vector of column names, only specified columns are selected. 
 ) {
@@ -18,7 +17,7 @@ function(
   colnames(d) = c("distinct_id", colnames(r2))
   d[, 1] = as.character(r1)
   
-  ## Fill empty array. Replace NULLs by NAs. Collapse array user properties.
+  ## Fill empty array. Replace NULLs by NAs. Collapse array profile properties.
   for (i in 1:ncol(r2))
     d[, 1+i] = unlist(lapply(r2[, i], function(z) if(is.null(z)) NA else paste(z, collapse=",")))
   d

@@ -24,6 +24,18 @@ mixpanelGetData(account, method="export/", args, validitySeconds=60, verbose=TRU
 
 \value{If \code{data==TRUE}, the method returns the response of the API request (raw character vector). Otherwise nothing is returned.}
 
+\examples{
+\dontrun{
+## Fill in here the API token, key and secret as found on 
+## www.mixpanel.com - Account -> Projects. 
+account = mixpanelCreateAccount("ProjectName",
+                                token="c12g3...",
+                                secret="168e7e...", 
+                                key="543c55...")
+                                
+mixpanelGetData(account, method="funnels/list/", args=list(), data=TRUE)
+}}
+
 \references{\url{https://mixpanel.com/docs/api-documentation/data-export-api}}
 
 \author{Meinhard Ploner}

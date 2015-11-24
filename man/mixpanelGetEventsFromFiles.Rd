@@ -8,7 +8,8 @@ Get events from Mixpanel API.
 Get a matrix filled with events taken from the Mixpanel API. 
 }
 \usage{
-mixpanelGetEventsFromFiles(account, dateFrom, dateTo, eventNames=c(), select=TRUE, blocksize=500000, verbose=TRUE)
+mixpanelGetEventsFromFiles(account, dateFrom, dateTo, eventNames=c(), 
+  select=TRUE, blocksize=500000, verbose=TRUE)
 }
 
 \arguments{

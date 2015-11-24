@@ -8,7 +8,8 @@ Retention report.
 Get matrix of retention data 
 }
 \usage{
-mixpanelGetRetention(account, event, from, to, unit, retentionType, intervalCount, percentages, ...)
+mixpanelGetRetention(account, event, from, to, unit, retentionType, 
+  intervalCount, percentages, ...)
 }
 
 \arguments{
@@ -34,6 +35,18 @@ Meinhard Ploner}
 \seealso{
 \code{\link{mixpanelGetAddiction}}
 }
+
+\examples{
+\dontrun{
+## Fill in here the API token, key and secret as found on 
+## www.mixpanel.com - Account -> Projects. 
+account = mixpanelCreateAccount("ProjectName",
+                                token="c12g3...",
+                                secret="168e7e...", 
+                                key="543c55...")
+mixpanelGetRetention(account, born_event="AppInstall", event="WatchedItem", 
+                     from=20150701, to=20151101, unit="week", percentages=TRUE)
+}}
 
 \keyword{mixpanel}
 \keyword{addiction}

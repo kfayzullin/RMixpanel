@@ -1,4 +1,4 @@
-mixpanelGetPeopleCount <- function(
+mixpanelGetProfilesCount <- function(
   account,
   where='',
   verbose=TRUE

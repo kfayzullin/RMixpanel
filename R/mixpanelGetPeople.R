@@ -1,4 +1,4 @@
-mixpanelGetPeople <- function(
+mixpanelGetProfiles <- function(
   account,
   where='',
   select=TRUE,       # Select only these columns. <TRUE> selects all columns.
@@ -20,9 +20,9 @@ mixpanelGetPeople <- function(
     stop("No profile found.")
   }
   if(verbose)
-    cat("*** Total people count is", totalCount, "\n")
+    cat("*** Total profiles count is", totalCount, "\n")
   
-  alldata = peopleJson2RMatrix(data, select)
+  alldata = profilesJson2RMatrix(data, select)
   
   for (page in 1:maxPage) {
     if(verbose)
@@ -31,7 +31,7 @@ mixpanelGetPeople <- function(
     if (page * pageSize >= totalCount || maxPage <= 0) break
     data = mixpanelGetData(account, "engage/", args, data=TRUE, verbose=verbose)
     data = jsonlite::fromJSON(data)
-    newdata = peopleJson2RMatrix(data, select)
+    newdata = profilesJson2RMatrix(data, select)
     alldata = merge.matrix(alldata, newdata)
   }
   if(verbose)
