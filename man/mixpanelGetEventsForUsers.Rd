@@ -21,7 +21,7 @@
 \author{Meinhard Ploner}
 
 \seealso{
-\code{\link{mixpanelGetPeople}},
+\code{\link{mixpanelGetProfiles}},
 \code{\link{mixpanelGetEvents}}
 }
 
