@@ -31,7 +31,7 @@ devtools::install_github("7factory/RMixpanel")
 require(RMixpanel)
 ```
 
-or (coming soon)
+or
 
 ``` r
 install.packages("RMixpanel")
