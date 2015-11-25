@@ -1,7 +1,7 @@
 \name{profilesJson2RMatrix}
 \alias{profilesJson2RMatrix}
 
-\title{Convert profiles data in json format to R matrix.}
+\title{Convert Profiles exported from Mixpanel API to R matrix.}
 
 \description{Convenience function to convert json result of engage API to R matrix holding people data.}
 
