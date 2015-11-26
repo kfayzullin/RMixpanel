@@ -1,7 +1,7 @@
 \name{mixpanelGetEventsForProfiles}
 \alias{mixpanelGetEventsForProfiles}
 
-\title{Get Events for specified Profiles}
+\title{Get Events For Specified Profiles}
 
 \description{Get a matrix filled with event data for specified people profiles.}
 

@@ -1,7 +1,7 @@
 \name{mixpanelGetEvents}
 \alias{mixpanelGetEvents}
 
-\title{Get Events from Mixpanel API}
+\title{Get Events From Mixpanel API}
 
 \description{Get a matrix filled with event data from the Mixpanel API.}
 

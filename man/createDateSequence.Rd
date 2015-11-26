@@ -1,7 +1,7 @@
 \name{createDateSequence}
 \alias{createDateSequence}
 
-\title{Generate and normalize sequence of dates.}
+\title{Generate And Normalize Sequence Of Dates.}
 
 \description{Generate a range of dates and normalize it. Used by other methods of this package.}
 

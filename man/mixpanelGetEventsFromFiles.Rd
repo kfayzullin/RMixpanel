@@ -1,7 +1,7 @@
 \name{mixpanelGetEventsFromFiles}
 \alias{mixpanelGetEventsFromFiles}
 
-\title{Get Events from files}
+\title{Get Events From Files}
 
 \description{Get an R matrix filled with event data using data saved into files.}
 

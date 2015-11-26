@@ -1,7 +1,7 @@
 \name{merge.matrix}
 \alias{merge.matrix}
 
-\title{Merge two matrices.}
+\title{Merge Two Matrices}
 
 \description{Merge two matrices by common column names. Resulting matrix includes all data. Empty cells are filled with NA's.}
 

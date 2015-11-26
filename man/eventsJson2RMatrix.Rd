@@ -1,7 +1,7 @@
 \name{eventsJson2RMatrix}
 \alias{eventsJson2RMatrix}
 
-\title{Convert Events exported from Mixpanel API to R matrix}
+\title{Convert Events Exported From Mixpanel API To R Matrix}
 
 \description{Convenience method to convert from pseudo json of Mixpanel's export API to R matrix holding events.}
 

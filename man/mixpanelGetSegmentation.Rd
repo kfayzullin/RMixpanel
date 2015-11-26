@@ -7,8 +7,6 @@
 
 \usage{mixpanelGetSegmentation(account, event, from, to, unit, type, on, action, ...)}
 
-%- maybe also 'usage' for other objects documented here.
-
 \arguments{
 \item{account}{A mixpanel account, as defined in \code{mixpanelCreateAccount}.}
 \item{event}{Event name. If empty, all events are returned.}
@@ -23,9 +21,13 @@
 
 \value{2 or 3-dimensional array showing event counts. The first dimension represents the time in the specified unit. The other dimension(s) are determined by the segmention properties.}
 
-\references{\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-default},
-	\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-sum},
-	\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-average}}
+\references{
+\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-default},
+
+\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-sum},
+
+\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-average}
+}
 
 \author{Meinhard Ploner}
 
