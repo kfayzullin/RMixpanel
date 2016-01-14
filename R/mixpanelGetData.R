@@ -10,7 +10,7 @@ mixpanelGetData <- function(
   retryCount=0              # 
 ) {
   if (fileName == "") {
-    filePath = "temp.txt"
+    filePath = paste("temp", system("uuidgen", intern=TRUE), ".txt", sep="")
     on.exit( { unlink(filePath) } )
     
   } else {
