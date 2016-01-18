@@ -14,7 +14,9 @@ make the parameterization more convenient and do the conversion from JSON to a c
   - `segmentation/`: get the segmentation matrix using `mixpanelGetSegmentation`. 
   - `retention/`: get the retention matrix using `mixpanelGetRetention`.
   - `addiction/`: get the addiction matrix using `mixpanelGetAddiction`.
-  - `engage/`: get the requested people profiles using `mixpanelGetProfiles`.
+  - `engage/`: 
+    - get the requested people profiles using `mixpanelGetProfiles`.
+    - update a people profiles using `mixpanelUpdateProfiles` (coming w/ version 0.1-4).
   - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForProfiles`.
   - `export/`: get event data as R matrix using `mixpanelGetEvents`.
 - Get people profile count for custom queries using `mixpanelGetProfilesCount`. 
@@ -99,6 +101,25 @@ More complex queries including logical operators and typecasts can be generated 
 ## ...
 
 > hist(as.numeric(profiles[, "KPI1"]))
+```
+
+
+#### Update selected profiles (coming w/ version 0.1-4)
+
+Remove property `KPI1` when the value is larger than 1000:
+``` r
+> profiles = mixpanelGetProfiles(account, where='properties["KPI1"] > 1000')
+> distinctIDs = profiles[, "distinct_id"]
+> for (distinctID in distinctIDs)
+>   mixpanelUpdateProfiles(account, distinctID, "$unset"="KPI1")
+```
+
+Delete all profiles where `KPI1` is not set:
+``` r
+> profiles = mixpanelGetProfiles(account, where='not properties["KPI1"]')
+> distinctIDs = profiles[, "distinct_id"]
+> for (distinctID in distinctIDs)
+>   mixpanelUpdateProfiles(account, distinctID, "$delete"="")
 ```
 
 #### Get funnel data by using the general export method
