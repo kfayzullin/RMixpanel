@@ -16,7 +16,7 @@ make the parameterization more convenient and do the conversion from JSON to a c
   - `addiction/`: get the addiction matrix using `mixpanelGetAddiction`.
   - `engage/`: 
     - get the requested people profiles using `mixpanelGetProfiles`.
-    - update a people profiles using `mixpanelUpdateProfiles` (coming w/ version 0.1-4).
+    - update a people profile using `mixpanelUpdateProfiles` (coming w/ version 0.1-4).
   - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForProfiles`.
   - `export/`: get event data as R matrix using `mixpanelGetEvents`.
 - Get people profile count for custom queries using `mixpanelGetProfilesCount`. 
