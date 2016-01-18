@@ -1,10 +1,10 @@
 ## RMixpanel - Mixpanel API client for R
 
 
-The package RMixpanel provides an interface from R to Mixpanel's Export API endpoints 
-(https://mixpanel.com/docs/api-documentation/data-export-api). 
-Furthermore, for the most frequently used API endpoints (segmentation, retention, engage, export, etc.) custom methods 
-make the parameterization more convenient and do the conversion from JSON to a corresponding R data.frame or R matrix.
+The package RMixpanel provides an interface from R to Mixpanel's API endpoints 
+(see https://mixpanel.com/docs/api-documentation/data-export-api and https://mixpanel.com/help/reference/http). 
+For the most frequently used API endpoints (segmentation, retention, engage, export, etc.) custom methods 
+make the parameterization more convenient and do the conversion from JSON to a corresponding R data.frame or R matrix. Furthermore it is possible to update or delete user profiles.
 
 ### Features
 
@@ -16,7 +16,7 @@ make the parameterization more convenient and do the conversion from JSON to a c
   - `addiction/`: get the addiction matrix using `mixpanelGetAddiction`.
   - `engage/`: 
     - get the requested people profiles using `mixpanelGetProfiles`.
-    - update a people profile using `mixpanelUpdateProfiles` (coming w/ version 0.1-4).
+    - update or delete a people profile using `mixpanelUpdateProfile` (coming w/ version 0.1-4).
   - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForProfiles`.
   - `export/`: get event data as R matrix using `mixpanelGetEvents`.
 - Get people profile count for custom queries using `mixpanelGetProfilesCount`. 
@@ -104,7 +104,7 @@ More complex queries including logical operators and typecasts can be generated 
 ```
 
 
-#### Update selected profiles (coming w/ version 0.1-4)
+#### Update or delete selected profiles (coming w/ version 0.1-4)
 
 Remove property `KPI1` when the value is larger than 1000:
 ``` r
