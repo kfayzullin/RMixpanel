@@ -16,7 +16,7 @@ make the parameterization more convenient and do the conversion from JSON to a c
   - `addiction/`: get the addiction matrix using `mixpanelGetAddiction`.
   - `engage/`: 
     - get the requested people profiles using `mixpanelGetProfiles`.
-    - update or delete a people profile using `mixpanelUpdateProfile` (coming w/ version 0.1-4).
+    - update or delete a people profile using `mixpanelUpdateProfile`.
   - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForProfiles`.
   - `export/`: get event data as R matrix using `mixpanelGetEvents`.
 - Get people profile count for custom queries using `mixpanelGetProfilesCount`. 
@@ -106,7 +106,7 @@ More complex queries including logical operators and typecasts can be generated 
 ```
 
 
-#### Update or delete selected profiles (coming w/ version 0.1-4)
+#### Update or delete selected profiles
 
 Remove property `KPI1` when the value is larger than 1000:
 ``` r
