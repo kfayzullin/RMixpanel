@@ -124,6 +124,15 @@ Delete all profiles where `KPI1` is not set:
 >   mixpanelUpdateProfiles(account, distinctID, "$delete"="")
 ```
 
+Add a random value between 1 and 10 called `bucket` to all people profiles:
+``` r
+> profiles = mixpanelGetProfiles(account)
+> distinctIDs = profiles[, "distinct_id"]
+> for (distinctID in distinctIDs)
+>   mixpanelUpdateProfiles(account, distinctID, "$set"=list(bucket=jsonlite::unbox(sample(10, 1))))
+```
+
+
 #### Get funnel data by using the general export method
 
 The general method `mixpanelGetData` allows to call all available API endpoints of the export API. However, the result is not parsed into R objects. Calling `jsonlite::fromJSON(data)` on the resulting data would do some parsing, but usually more 
