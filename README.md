@@ -113,7 +113,7 @@ Remove property `KPI1` when the value is larger than 1000:
 > profiles = mixpanelGetProfiles(account, where='properties["KPI1"] > 1000')
 > distinctIDs = profiles[, "distinct_id"]
 > for (distinctID in distinctIDs)
->   mixpanelUpdateProfiles(account, distinctID, "$unset"="KPI1")
+>   mixpanelUpdateProfile(account, distinctID, "$unset"="KPI1")
 ```
 
 Delete all profiles where `KPI1` is not set:
@@ -121,7 +121,7 @@ Delete all profiles where `KPI1` is not set:
 > profiles = mixpanelGetProfiles(account, where='not properties["KPI1"]')
 > distinctIDs = profiles[, "distinct_id"]
 > for (distinctID in distinctIDs)
->   mixpanelUpdateProfiles(account, distinctID, "$delete"="")
+>   mixpanelUpdateProfile(account, distinctID, "$delete"="")
 ```
 
 Add a random value between 1 and 10 called `bucket` to all people profiles:
@@ -129,7 +129,7 @@ Add a random value between 1 and 10 called `bucket` to all people profiles:
 > profiles = mixpanelGetProfiles(account)
 > distinctIDs = profiles[, "distinct_id"]
 > for (distinctID in distinctIDs)
->   mixpanelUpdateProfiles(account, distinctID, "$set"=list(bucket=jsonlite::unbox(sample(10, 1))))
+>   mixpanelUpdateProfile(account, distinctID, "$set"=list(bucket=jsonlite::unbox(sample(10, 1))))
 ```
 
 
