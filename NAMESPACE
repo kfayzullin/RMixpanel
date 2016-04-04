@@ -1,8 +1,10 @@
 importFrom("utils", "URLencode", "download.file") 
 
 S3method(merge, matrix)
+S3method(print, retention)
 
 export(
+print.retention,
 merge.matrix,mixpanelCreateAccount,mixpanelGetAddiction,
 mixpanelGetData,mixpanelGetEvents,
 mixpanelGetEventsFromFiles,mixpanelGetEventsForProfiles,mixpanelGetProfiles,

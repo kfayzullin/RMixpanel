@@ -1,6 +1,6 @@
 Package: RMixpanel
-Version: 0.2-1
-Date: 2016-01-19
+Version: 0.2-2
+Date: 2016-04-04
 Title: R API for Mixpanel
 Author: Meinhard Ploner
 Maintainer: Meinhard Ploner <meinhard.ploner@prosiebensat1digital.de>
