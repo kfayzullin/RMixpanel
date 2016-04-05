@@ -32,7 +32,8 @@ account = mixpanelCreateAccount("ProjectName",
                                 key="543c55...")
 ret = mixpanelGetRetention(account, born_event="AppInstall", event="WatchedItem", 
                      from=20150701, to=20151101, unit="week")
-print(res)
+print(ret, percentages=FALSE)
+print(ret, percentages=TRUE)
 }}
 
 \keyword{mixpanel}

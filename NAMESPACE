@@ -2,8 +2,10 @@ importFrom("utils", "URLencode", "download.file")
 
 S3method(merge, matrix)
 S3method(print, retention)
+S3method(plot, retention)
 
 export(
+plot.retention,
 print.retention,
 merge.matrix,mixpanelCreateAccount,mixpanelGetAddiction,
 mixpanelGetData,mixpanelGetEvents,
